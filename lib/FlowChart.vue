@@ -51,10 +51,12 @@
         delay(),
       ]).then(([flowchart]) => {
         const { parse } = flowchart.default
-        const svg = parse(code)
-        this.$el.innerHTML = ''
-        svg.drawSVG(this.id, preset)
         this.loading = false
+        this.$nextTick(() => {
+          this.$el.innerHTML = ''
+          const svg = parse(code)
+          svg.drawSVG(this.id, preset)
+        })
       })
     }
   }
