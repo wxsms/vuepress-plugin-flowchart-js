@@ -52,6 +52,7 @@
       ]).then(([flowchart]) => {
         const { parse } = flowchart.default
         const svg = parse(code)
+        this.$el.innerHTML = ''
         svg.drawSVG(this.id, preset)
         this.loading = false
       })
