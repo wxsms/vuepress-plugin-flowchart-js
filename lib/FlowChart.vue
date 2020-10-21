@@ -1,6 +1,6 @@
 <template>
   <ClientOnly>
-    <div :class="{ 'loading': loading }" class="vuepress-flowchart">
+    <div :class="{ 'loading': loading }" class="vuepress-flowchart" ref="el">
       <Loading class="vuepress-flowchart-loading-icon" v-if="loading"/>
     </div>
   </ClientOnly>
@@ -46,7 +46,7 @@
       }
 
       const code = this.code
-      this.$el.setAttribute('id', this.id)
+      this.$refs.el.setAttribute('id', this.id)
       const delay = () => new Promise(resolve => setTimeout(resolve, 500))
       Promise.all([
         import(/* webpackChunkName: "flowchart" */ 'flowchart.js'),
@@ -55,7 +55,7 @@
         const { parse } = flowchart.default
         this.loading = false
         this.$nextTick(() => {
-          this.$el.innerHTML = ''
+          this.$refs.el.innerHTML = ''
           const svg = parse(code)
           svg.drawSVG(this.id, preset)
         })
