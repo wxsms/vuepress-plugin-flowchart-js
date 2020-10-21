@@ -44,20 +44,24 @@
         console.warn(`[vuepress-plugin-flowchart] Unknown preset: ${this.preset}`)
         return
       }
-
-      const code = this.code
-      this.$refs.el.setAttribute('id', this.id)
-      const delay = () => new Promise(resolve => setTimeout(resolve, 500))
-      Promise.all([
-        import(/* webpackChunkName: "flowchart" */ 'flowchart.js'),
-        delay(),
-      ]).then(([flowchart]) => {
-        const { parse } = flowchart.default
-        this.loading = false
-        this.$nextTick(() => {
-          this.$refs.el.innerHTML = ''
-          const svg = parse(code)
-          svg.drawSVG(this.id, preset)
+      this.$nextTick(() => {
+        if (!this.$refs.el) {
+          return
+        }
+        const code = this.code
+        this.$refs.el.setAttribute('id', this.id)
+        const delay = () => new Promise(resolve => setTimeout(resolve, 500))
+        Promise.all([
+          import(/* webpackChunkName: "flowchart" */ 'flowchart.js'),
+          delay(),
+        ]).then(([flowchart]) => {
+          const { parse } = flowchart.default
+          this.loading = false
+          this.$nextTick(() => {
+            this.$refs.el.innerHTML = ''
+            const svg = parse(code)
+            svg.drawSVG(this.id, preset)
+          })
         })
       })
     }
