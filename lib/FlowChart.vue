@@ -1,7 +1,9 @@
 <template>
-  <div :class="{ 'loading': loading }" class="vuepress-flowchart">
-    <Loading class="vuepress-flowchart-loading-icon" v-if="loading"/>
-  </div>
+  <ClientOnly>
+    <div :class="{ 'loading': loading }" class="vuepress-flowchart">
+      <Loading class="vuepress-flowchart-loading-icon" v-if="loading"/>
+    </div>
+  </ClientOnly>
 </template>
 
 <script>
