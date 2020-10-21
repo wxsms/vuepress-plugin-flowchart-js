@@ -1,9 +1,7 @@
 <template>
-  <ClientOnly>
-    <div :class="{ 'loading': loading }" class="vuepress-flowchart" ref="el">
-      <Loading class="vuepress-flowchart-loading-icon" v-if="loading"/>
-    </div>
-  </ClientOnly>
+  <div :class="{ 'loading': loading }" class="vuepress-flowchart">
+    <Loading class="vuepress-flowchart-loading-icon" v-if="loading"/>
+  </div>
 </template>
 
 <script>
@@ -44,24 +42,20 @@
         console.warn(`[vuepress-plugin-flowchart] Unknown preset: ${this.preset}`)
         return
       }
-      this.$nextTick(() => {
-        if (!this.$refs.el) {
-          return
-        }
-        const code = this.code
-        this.$refs.el.setAttribute('id', this.id)
-        const delay = () => new Promise(resolve => setTimeout(resolve, 500))
-        Promise.all([
-          import(/* webpackChunkName: "flowchart" */ 'flowchart.js'),
-          delay(),
-        ]).then(([flowchart]) => {
-          const { parse } = flowchart.default
-          this.loading = false
-          this.$nextTick(() => {
-            this.$refs.el.innerHTML = ''
-            const svg = parse(code)
-            svg.drawSVG(this.id, preset)
-          })
+
+      const code = this.code
+      this.$el.setAttribute('id', this.id)
+      const delay = () => new Promise(resolve => setTimeout(resolve, 500))
+      Promise.all([
+        import(/* webpackChunkName: "flowchart" */ 'flowchart.js'),
+        delay(),
+      ]).then(([flowchart]) => {
+        const { parse } = flowchart.default
+        this.loading = false
+        this.$nextTick(() => {
+          this.$el.innerHTML = ''
+          const svg = parse(code)
+          svg.drawSVG(this.id, preset)
         })
       })
     }
