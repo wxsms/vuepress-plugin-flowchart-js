@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/wxsms/vuepress-plugin-flowchart-js.git"
   },
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "documentation",
     "vue",

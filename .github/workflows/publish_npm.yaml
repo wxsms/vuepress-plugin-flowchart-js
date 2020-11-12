@@ -16,8 +16,6 @@ jobs:
           node-version: 12.x
           registry-url: https://registry.npmjs.org
       - run: yarn --frozen-lockfile
-      - name: Build
-        run: npm run build
       # 发布
       - name: Publish NPM
         run: npm publish
