@@ -5,88 +5,88 @@
 </template>
 
 <script>
-  import Loading from './Loading'
-  import presets from './presets/index'
+import Loading from './Loading'
+import presets from './presets/index'
 
-  export default {
-    name: 'flowchart',
+export default {
+  name: 'flowchart',
 
-    components: {
-      Loading
+  components: {
+    Loading
+  },
+
+  props: {
+    id: {
+      type: String,
+      required: true
     },
-
-    props: {
-      id: {
-        type: String,
-        required: true
-      },
-      code: {
-        type: String,
-        required: true
-      },
-      preset: {
-        type: String,
-        default: 'vue'
-      }
+    code: {
+      type: String,
+      required: true
     },
-
-    data () {
-      return {
-        loading: true
-      }
-    },
-
-    mounted () {
-      const preset = presets[this.preset]
-      if (!preset) {
-        console.warn(`[vuepress-plugin-flowchart] Unknown preset: ${this.preset}`)
-        return
-      }
-
-      const code = this.code
-      this.$el.setAttribute('id', this.id)
-      const delay = () => new Promise(resolve => setTimeout(resolve, 500))
-      Promise.all([
-        import(/* webpackChunkName: "flowchart" */ 'flowchart.js'),
-        delay(),
-      ]).then(([flowchart]) => {
-        const { parse } = flowchart.default
-        this.loading = false
-        this.$nextTick(() => {
-          this.$el.innerHTML = ''
-          const svg = parse(code)
-          svg.drawSVG(this.id, preset)
-        })
-      })
+    preset: {
+      type: String,
+      default: 'vue'
     }
+  },
+
+  data () {
+    return {
+      loading: true
+    }
+  },
+
+  mounted () {
+    const preset = presets[this.preset]
+    if (!preset) {
+      console.warn(`[vuepress-plugin-flowchart] Unknown preset: ${this.preset}`)
+      return
+    }
+
+    const code = this.code
+    this.$el.setAttribute('id', this.id)
+    const delay = () => new Promise(resolve => setTimeout(resolve, 500))
+    Promise.all([
+      import(/* webpackChunkName: "flowchart" */ 'flowchart.js'),
+      delay(),
+    ]).then(([flowchart]) => {
+      const { parse } = flowchart.default
+      this.loading = false
+      this.$nextTick(() => {
+        this.$el.innerHTML = ''
+        const svg = parse(code)
+        svg.drawSVG(this.id, preset)
+      })
+    })
   }
+}
 </script>
 
 <style lang="stylus">
-  .vuepress-flowchart
-    overflow auto
-    text-align center
-    font-size 0
-    min-height 200px
-    display flex
-    justify-content center
-    align-items center
-    transition all 1s
-    padding 10px
+.vuepress-flowchart
+  overflow auto
+  text-align center
+  font-size 0
+  min-height 200px
+  display flex
+  justify-content center
+  align-items center
+  transition all 1s
+  padding 10px
 
-    & > svg
-      max-width 100%
-      height auto
+  & > svg
+    max-width 100%
+    height auto
 
-    &.loading
-      background-color #f3f6f8
+  &.loading
+    background-color #f3f6f8
 
-  .operation-element, .parallel-element
-    rx 5px
-    ry 5px
+.operation-element, .parallel-element
+  rx 5px
+  ry 5px
 
-  .vuepress-flowchart-loading-icon
-    width 40px
-    height 40px
-    fill #3eaf7c
+.vuepress-flowchart-loading-icon
+  width 40px
+  height 40px
+  fill #3eaf7c
 </style>

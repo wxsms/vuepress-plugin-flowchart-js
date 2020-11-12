@@ -278,3 +278,12 @@ cond(no)->para
 para(path1, bottom)->sub1(right)->op1
 para(path2, top)->op1
 ```
+
+## Changes from the original
+
+1. Use <code>\`\`\`flowchart</code> and <code>\`\`\`</code> as default wrapping syntax instead of `@flowstart` and `@flowend`.
+1. Remove redundant scrollbars from the charts.
+1. Skip SSR by wrapping chart components with `<ClientOnly>`, because:
+    1. Normally the SVG tags make no sense to search engines.
+    1. Avoid problems.
+1. Fix a problem while sometimes charts rendered multiple times in a container.
