@@ -7,6 +7,23 @@
 
 > This repository used to be a fork of [ulivz/vuepress-plugin-flowchart](https://github.com/ulivz/vuepress-plugin-flowchart) but the original one is no longer maintained, so here's our own. Thanks for the awesome work made by [ulivz](https://github.com/ulivz).
 
+## Install
+
+```bash
+yarn add vuepress-plugin-flowchart-js -D
+```
+
+## Usage
+
+```javascript
+// .vuepress/config.js
+module.exports = {
+  plugins: [
+    'flowchart-js'
+  ]
+}
+```
+
 ## Features
 
 - Integrated [flowchart.js](https://github.com/adrai/flowchart.js/) with [vuepress](https://github.com/vuejs/vuepress)
@@ -23,7 +40,6 @@ Check out the full [documentation](https://vuepress-plugin-flowchart-js.wxsm.spa
     1. Normally the SVG tags make no sense to search engines.
     1. Avoid problems.
 1. Fix a problem while sometimes charts rendered multiple times in a container.
-
 
 ## License
 

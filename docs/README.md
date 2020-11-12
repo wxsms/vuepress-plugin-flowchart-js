@@ -2,6 +2,12 @@
 sidebar: auto
 ---
 
+::: tip
+This repository used to be a fork of [ulivz/vuepress-plugin-flowchart](https://github.com/ulivz/vuepress-plugin-flowchart) but the original one is no longer maintained, so here's our own. Thanks for the awesome work made by [ulivz](https://github.com/ulivz).
+:::
+
+## Example
+
 ```flowchart
 st=>start: Start:>http://www.google.com[blank]
 e=>end:>http://www.google.com
@@ -18,9 +24,6 @@ cond(no)->para
 para(path1, bottom)->sub1(right)->op1
 para(path2, top)->op1
 ```
-
-> This repository used to be a fork of [ulivz/vuepress-plugin-flowchart](https://github.com/ulivz/vuepress-plugin-flowchart) but the original one is no longer maintained, so here's our own. Thanks for the awesome work made by [ulivz](https://github.com/ulivz).
-
 
 ## Install
 
@@ -46,9 +49,9 @@ module.exports = {
 ## Syntax
 
 <pre class="language-markdown"><code>```flowchart [preset]
-    
-    <!-- Your flowchart code here. -->
-    
+
+Your flowchart code here
+
 ```</code></pre>
 
 `vuepress-plugin-flowchart` leverages [flowchart.js](https://github.com/adrai/flowchart.js) under the hook.
