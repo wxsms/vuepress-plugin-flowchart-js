@@ -3458,7 +3458,7 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
-flowchart.js@^1.11.3:
+flowchart.js@1.15.0:
   version "1.15.0"
   resolved "https://registry.npm.taobao.org/flowchart.js/download/flowchart.js-1.15.0.tgz#132ba2df14af0a65e67280026ef05a1ffd16569f"
   integrity sha1-Eyui3xSvCmXmcoACbvBaH/0WVp8=
@@ -7577,9 +7577,9 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress@^1:
+vuepress@1.7.1:
   version "1.7.1"
-  resolved "https://registry.npm.taobao.org/vuepress/download/vuepress-1.7.1.tgz#bb0e139d8c407a0b5aa962cf9577832a5808937e"
+  resolved "https://registry.npm.taobao.org/vuepress/download/vuepress-1.7.1.tgz?cache=0&sync_timestamp=1602782896786&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvuepress%2Fdownload%2Fvuepress-1.7.1.tgz#bb0e139d8c407a0b5aa962cf9577832a5808937e"
   integrity sha1-uw4TnYxAegtaqWLPlXeDKlgIk34=
   dependencies:
     "@vuepress/core" "1.7.1"
