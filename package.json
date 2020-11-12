@@ -19,7 +19,7 @@
     "flowchart"
   ],
   "dependencies": {
-    "flowchart.js": "^1.11.3"
+    "flowchart.js": "1.15.0"
   },
   "author": "wxsms <wxsms@foxmail.com>",
   "license": "MIT",
@@ -28,7 +28,7 @@
   },
   "homepage": "https://vuepress-plugin-flowchart-js.wxsm.space",
   "devDependencies": {
-    "vuepress": "^1"
+    "vuepress": "1.7.1"
   },
   "peerDependencies": {
     "vuepress": "^1"
