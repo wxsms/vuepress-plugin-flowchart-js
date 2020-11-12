@@ -1,12 +1,11 @@
-<h1 align="center">vuepress-plugin-flowchart</h1>
+# vuepress-plugin-flowchart-js
 
-<p align="center">
-<a href="https://npmjs.com/package/vuepress-plugin-flowchart"><img src="https://img.shields.io/npm/v/vuepress-plugin-flowchart.svg?style=flat" alt="NPM version"></a> <a href="https://npmjs.com/package/vuepress-plugin-flowchart"><img src="https://img.shields.io/npm/dm/vuepress-plugin-flowchart.svg?style=flat" alt="NPM downloads"></a> <a href="https://github.com/ulivz/donate"><img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat" alt="donate"></a>
-</p>
+[![Badge](https://badgen.net/npm/dm/vuepress-plugin-flowchart-js)](https://www.npmjs.com/package/vuepress-plugin-flowchart-js)
+[![Badge](https://badgen.net/npm/v/vuepress-plugin-flowchart-js)](https://www.npmjs.com/package/vuepress-plugin-flowchart-js)
 
-<p align="center">
-  <img src="https://github.com/ulivz/vuepress-plugin-flowchart/blob/master/.media/preview.png?raw=true" alt="preview">
-</p>
+![preview](https://static.wxsm.space/others/vue-plugin-flowchart-preview.png)
+
+> This repository used to be a fork of [ulivz/vuepress-plugin-flowchart](https://github.com/ulivz/vuepress-plugin-flowchart) but the original one is no longer maintained, so here's our own. Thanks for the awesome work made by [ulivz](https://github.com/ulivz).
 
 ## Features
 
@@ -14,19 +13,8 @@
 - Content loading.
 - Out-of-the-box styling preset (Currently support `vue`、`ant`).
 
-Check out the full [documentation](https://flowchart.vuepress.ulivz.com/).
+Check out the full [documentation](https://vuepress-plugin-flowchart-js.wxsm.space).
 
-## Contributing
+## License
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
-
-## Author
-
-**vuepress-plugin-flowchart** © [ulivz](https://github.com/ULIVZ), Released under the [MIT](./LICENSE) License.<br>
-Authored and maintained by ulivz with help from contributors ([list](https://github.com/ULIVZ/vuepress-plugin-flowchart/contributors)).
-
-> [github.com/ulivz](https://github.com/ulivz) · GitHub [@ulivz](https://github.com/ULIVZ) · Twitter [@_ulivz](https://twitter.com/_ulivz)
+MIT
