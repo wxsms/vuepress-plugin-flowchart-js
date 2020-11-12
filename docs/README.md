@@ -58,7 +58,7 @@ Available presets for now:
 - `vue` (default)
 - `ant`
 
-View the current available preset [here](https://github.com/ulivz/vuepress-plugin-flowchart/tree/master/lib/presets), feel free to submit your own preset. : )
+View the current available preset [here](https://github.com/wxsms/vuepress-plugin-flowchart-js/tree/master/lib/presets), feel free to submit your own preset. : )
 
 ### Start & End
 
