@@ -31,7 +31,7 @@
   },
   "homepage": "https://vuepress-plugin-flowchart-js.wxsm.space",
   "devDependencies": {
-    "vuepress": "1.7.1"
+    "vuepress": "1.8.0"
   },
   "peerDependencies": {
     "vuepress": "^1"
