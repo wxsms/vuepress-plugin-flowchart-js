@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vuepress-plugin-flowchart-js</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="Rapid flowchart development plugin for vuepress">
+    
+    <link rel="preload" href="/assets/css/0.styles.2d525f32.css" as="style"><link rel="preload" href="/assets/js/app.197ea51f.js" as="script"><link rel="preload" href="/assets/js/3.12c6e623.js" as="script"><link rel="preload" href="/assets/js/8.22acd20d.js" as="script"><link rel="prefetch" href="/assets/js/4.792be7b6.js"><link rel="prefetch" href="/assets/js/5.c281a3ea.js"><link rel="prefetch" href="/assets/js/6.8ccbbdd9.js"><link rel="prefetch" href="/assets/js/7.124676d1.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.c3000006.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2d525f32.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" aria-current="page" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">vuepress-plugin-flowchart-js</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/wxsms/vuepress-plugin-flowchart-js" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/wxsms/vuepress-plugin-flowchart-js" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/#example" class="sidebar-link">Example</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/#install" class="sidebar-link">Install</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/#usage" class="sidebar-link">Usage</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/#syntax" class="sidebar-link">Syntax</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/#start-end" class="sidebar-link">Start &amp; End</a></li><li class="sidebar-sub-header"><a href="/#operation" class="sidebar-link">Operation</a></li><li class="sidebar-sub-header"><a href="/#inputoutput" class="sidebar-link">Inputoutput</a></li><li class="sidebar-sub-header"><a href="/#subroutine" class="sidebar-link">Subroutine</a></li><li class="sidebar-sub-header"><a href="/#condition" class="sidebar-link">Condition</a></li><li class="sidebar-sub-header"><a href="/#parallel" class="sidebar-link">Parallel</a></li></ul></li><li><a href="/#showcase" class="sidebar-link">Showcase</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/#_1-ordinary-process" class="sidebar-link">#1 Ordinary process</a></li><li class="sidebar-sub-header"><a href="/#_2-complex-process" class="sidebar-link">#2 Complex process</a></li><li class="sidebar-sub-header"><a href="/#_3-ant-preset" class="sidebar-link">#3 Ant Preset</a></li></ul></li><li><a href="/#changes-from-the-original" class="sidebar-link">Changes from the original</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>This repository used to be a fork of <a href="https://github.com/ulivz/vuepress-plugin-flowchart" target="_blank" rel="noopener noreferrer">ulivz/vuepress-plugin-flowchart<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> but the original one is no longer maintained, so here's our own. Thanks for the awesome work made by <a href="https://github.com/ulivz" target="_blank" rel="noopener noreferrer">ulivz<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>.</p></div> <h2 id="example"><a href="#example" class="header-anchor">#</a> Example</h2> <!----><h2 id="install"><a href="#install" class="header-anchor">#</a> Install</h2> <div class="custom-block warning"><p class="custom-block-title">Note</p> <p>This plugin requires VuePress &gt;= 1.0.0</p></div> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> vuepress-plugin-flowchart-js -D
+</code></pre></div><h2 id="usage"><a href="#usage" class="header-anchor">#</a> Usage</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// .vuepress/config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">'flowchart-js'</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="syntax"><a href="#syntax" class="header-anchor">#</a> Syntax</h2> <pre class="language-markdown"><code>```flowchart [preset]
+
+Your flowchart code here
+
+```</code></pre> <p><code>vuepress-plugin-flowchart</code> leverages <a href="https://github.com/adrai/flowchart.js" target="_blank" rel="noopener noreferrer">flowchart.js<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> under the hook.</p> <p>Available presets for now:</p> <ul><li><code>vue</code> (default)</li> <li><code>ant</code></li></ul> <p>View the current available preset <a href="https://github.com/wxsms/vuepress-plugin-flowchart-js/tree/master/lib/presets" target="_blank" rel="noopener noreferrer">here<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>, feel free to submit your own preset. : )</p> <h3 id="start-end"><a href="#start-end" class="header-anchor">#</a> Start &amp; End</h3> <ul><li><code>[Variable]-&gt;start: [Text]</code></li> <li><code>[Variable]-&gt;end: [Text]</code></li></ul> <pre class="language-markdown"><code>```flowchart
+st=&gt;start: Start
+e=&gt;end: End
+
+st-&gt;e
+```</code></pre> <!----><h3 id="operation"><a href="#operation" class="header-anchor">#</a> Operation</h3> <ul><li><code>[Variable]-&gt;operation: [Text]</code></li></ul> <pre class="language-markdown"><code>```flowchart
+process=&gt;operation: Operation
+e=&gt;end: End
+
+process-&gt;e
+```</code></pre> <!----><h3 id="inputoutput"><a href="#inputoutput" class="header-anchor">#</a> Inputoutput</h3> <ul><li><code>[Variable]-&gt;inputoutput: [Text]</code></li></ul> <pre class="language-markdown"><code>```flowchart
+process=&gt;inputoutput: Inputoutput
+e=&gt;end: End
+
+process-&gt;e
+```</code></pre> <!----><h3 id="subroutine"><a href="#subroutine" class="header-anchor">#</a> Subroutine</h3> <ul><li><code>[Variable]-&gt;subroutine: [Text]</code></li></ul> <pre class="language-markdown"><code>```flowchart
+process=&gt;subroutine: Subroutine
+e=&gt;end: End
+
+process-&gt;e
+```</code></pre> <!----><h3 id="condition"><a href="#condition" class="header-anchor">#</a> Condition</h3> <ul><li><code>[Variable]-&gt;condition: [Text]</code></li> <li><code>[Variable]([yesText])-&gt;[Position]</code></li> <li><code>[Variable]([noText])-&gt;[Position]</code></li></ul> <pre class="language-markdown"><code>```flowchart
+cond=&gt;condition: Process?
+process=&gt;operation: Process
+e=&gt;end: End
+
+cond(yes)-&gt;process-&gt;e
+cond(no)-&gt;e
+```</code></pre> <!----><h3 id="parallel"><a href="#parallel" class="header-anchor">#</a> Parallel</h3> <ul><li><code>[Variable]-&gt;parallel: [Text]</code></li> <li><code>[Variable](path1, direction)-&gt;[Position]</code></li> <li><code>[Variable](path1, direction)-&gt;[Position]</code></li></ul> <pre class="language-markdown"><code>```flowchart
+para=&gt;parallel: parallel tasks
+process=&gt;operation: Process
+e=&gt;end: End
+
+para(path1, bottom)-&gt;process-&gt;e
+para(path2)-&gt;e
+```</code></pre> <!----><h2 id="showcase"><a href="#showcase" class="header-anchor">#</a> Showcase</h2> <h3 id="_1-ordinary-process"><a href="#_1-ordinary-process" class="header-anchor">#</a> #1 Ordinary process</h3> <pre class="language-markdown"><code>```flowchart
+stage1=&gt;operation: Stage 1
+stage2=&gt;operation: Stage 2
+stage3=&gt;operation: Stage 3
+
+stage1-&gt;stage2-&gt;stage3
+```</code></pre> <!----><h3 id="_2-complex-process"><a href="#_2-complex-process" class="header-anchor">#</a> #2 Complex process</h3> <pre class="language-markdown"><code>```flowchart
+st=&gt;start: Start|past:&gt;http://www.google.com[blank]
+e=&gt;end: End|future:&gt;http://www.google.com
+op1=&gt;operation: My Operation|past
+op2=&gt;operation: Stuff|current
+sub1=&gt;subroutine: My Subroutine|invalid
+cond=&gt;condition: Yes
+or No?|approved:&gt;http://www.google.com
+c2=&gt;condition: Good idea|rejected
+io=&gt;inputoutput: catch something...|future
+
+st-&gt;op1(right)-&gt;cond
+cond(yes, right)-&gt;c2
+cond(no)-&gt;sub1(left)-&gt;op1
+c2(yes)-&gt;io-&gt;e
+c2(no)-&gt;op2-&gt;e
+```</code></pre> <!----><h3 id="_3-ant-preset"><a href="#_3-ant-preset" class="header-anchor">#</a> #3 Ant Preset</h3> <pre class="language-markdown"><code>```flowchart ant
+st=&gt;start: Start:&gt;http://www.google.com[blank]
+e=&gt;end:&gt;http://www.google.com
+op1=&gt;operation: My Operation
+sub1=&gt;subroutine: My Subroutine
+cond=&gt;condition: Yes
+or No?:&gt;http://www.google.com
+io=&gt;inputoutput: catch something...
+para=&gt;parallel: parallel tasks
+
+st-&gt;op1-&gt;cond
+cond(yes)-&gt;io-&gt;e
+cond(no)-&gt;para
+para(path1, bottom)-&gt;sub1(right)-&gt;op1
+para(path2, top)-&gt;op1
+```</code></pre> <!----><h2 id="changes-from-the-original"><a href="#changes-from-the-original" class="header-anchor">#</a> Changes from the original</h2> <ol><li>Use <code>```flowchart</code> and <code>```</code> as default wrapping syntax instead of <code>@flowstart</code> and <code>@flowend</code>.</li> <li>Remove redundant scrollbars from the charts.</li> <li>Skip SSR by wrapping chart components with <code>&lt;ClientOnly&gt;</code>, because:
+<ol><li>Normally the SVG tags make no sense to search engines.</li> <li>Avoid problems.</li></ol></li> <li>Fix a problem while sometimes charts rendered multiple times in a container.</li></ol></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/wxsms/vuepress-plugin-flowchart-js/edit/master/docs/README.md" target="_blank" rel="noopener noreferrer">Edit this page on GitHub</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">11/12/2020, 6:26:56 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.197ea51f.js" defer></script><script src="/assets/js/3.12c6e623.js" defer></script><script src="/assets/js/8.22acd20d.js" defer></script>
+  </body>
+</html>
